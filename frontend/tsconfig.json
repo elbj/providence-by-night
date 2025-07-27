@@ -11,7 +11,8 @@
       "@shared/*": ["../shared/*"]
     },
     "types": ["node"],
-    "skipLibCheck": true, 
+    "skipLibCheck": true, // ⬅ Ignore les erreurs dans les .d.ts
+    "noEmit": true,
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
