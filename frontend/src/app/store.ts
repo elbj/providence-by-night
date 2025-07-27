@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import personnageReducer from '../features/personnage/personnageSlice'
+import personnageReducer from '../features/personnage/personnageSlice.ts'
 
 export const store = configureStore({
   reducer: {

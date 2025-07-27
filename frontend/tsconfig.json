@@ -2,18 +2,18 @@
   "compilerOptions": {
     "target": "ESNext",
     "lib": ["DOM", "ES2015"],
-    "module": "ESNext",
-    "moduleResolution": "bundler",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "allowImportingTsExtensions": true,
     "strict": true,
     "jsx": "react-jsx",
+    "types": ["node"],
+    "skipLibCheck": true,
+    "noEmit": true,
     "baseUrl": ".",
     "paths": {
       "@shared/*": ["../shared/*"]
-    },
-    "types": ["node"],
-    "skipLibCheck": true, // ⬅ Ignore les erreurs dans les .d.ts
-    "noEmit": true,
+    }
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src"]
 }
