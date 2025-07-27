@@ -10,7 +10,8 @@
     "paths": {
       "@shared/*": ["../shared/*"]
     },
-    "types": ["node"]
+    "types": ["node"],
+    "skipLibCheck": true, 
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
