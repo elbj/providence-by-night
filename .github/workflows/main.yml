@@ -2,9 +2,9 @@ name: Build Frontend
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -15,12 +15,9 @@ jobs:
         working-directory: ./frontend
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v3
-        
-      - name: TypeScript check
-        run: npx tsc --noEmit
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -29,5 +26,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
+      - name: TypeScript check
+        run: npx tsc --noEmit
+
+      - name: Build
         run: npm run build
